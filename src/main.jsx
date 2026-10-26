@@ -33,7 +33,7 @@ function App() {
       return;
     }
     const message = `Bonjour IMANS HOTEL, je souhaite demander une réservation. Chambre : ${room}. Arrivée : ${arrival || 'à préciser'}. Départ : ${departure || 'à préciser'}. Voyageurs : ${guests}.`;
-    window.open(`https://wa.me/${HOTEL.whatsapp.replace(/\\D/g, '')}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+    window.open(`https://wa.me/${HOTEL.whatsapp.replace(/\D/g, '')}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
   }
   function callHotel() {
     if (HOTEL.phone) window.location.href = `tel:${HOTEL.phone}`;
@@ -45,7 +45,7 @@ function App() {
   }
 
   return <div className="site">
-    <div className="topline"><span className="dot" /> HOSPITALITÉ & CONFORT <i /> DALОA, CÔTE D’IVOIRE</div>
+    <div className="topline"><span className="dot" /> HOSPITALITÉ & CONFORT <i /> DALOA, CÔTE D’IVOIRE</div>
     <header className="header">
       <a className="brand" href="#accueil" onClick={closeMenu}><span className="brand-icon">I<sup>✦</sup></span><span><b>IMANS</b><small>H O T E L</small></span></a>
       <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-label="Ouvrir ou fermer le menu">{menuOpen ? <X/> : <Menu/>}</button>
@@ -77,7 +77,7 @@ function App() {
 
       <section className="section intro" id="hotel"><div className="section-label"><span>01</span> BIENVENUE CHEZ IMANS</div>
         <div className="intro-grid"><h2>Le plaisir de<br/>se sentir <em>bien.</em></h2><div className="intro-copy"><p className="lead">Bienvenue à IMANS HOTEL, votre point de départ pour un séjour à Daloa.</p><p>Cette maquette présente une expérience hôtelière élégante, claire et facile à parcourir. Les photos, catégories de chambres, tarifs et coordonnées définitifs seront ajoutés après validation par la direction.</p><a className="text-link" href="#services">Explorer les services <ArrowUpRight size={16}/></a></div></div>
-        <div className="feature-photo"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1800&q=90" alt="Hôtel, image d’inspiration"/><div><span>IMANS HOTEL</span><span>DALОA · CÔTE D’IVOIRE</span></div></div>
+        <div className="feature-photo"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1800&q=90" alt="Hôtel, image d’inspiration"/><div><span>IMANS HOTEL</span><span>DALOA · CÔTE D’IVOIRE</span></div></div>
       </section>
 
       <section className="section rooms" id="chambres"><div className="section-heading"><div><div className="section-label"><span>02</span> ESPACES DE REPOS</div><h2>Des chambres<br/><em>pour vous accueillir.</em></h2></div><p>Les photos et catégories ci-dessous sont provisoires. Elles seront ajustées selon l’offre réelle de l’hôtel. Aucun tarif n’est inventé.</p></div>
@@ -93,7 +93,7 @@ function App() {
 
       <section className="contact-banner"><div className="rings"/><div className="section-label"><span>05</span> NOUS SOMMES À VOTRE ÉCOUTE</div><h2>Votre prochain séjour<br/>commence <em>ici.</em></h2><p>Contactez IMANS HOTEL pour obtenir les informations et disponibilités confirmées.</p><div className="hero-buttons"><button className="btn gold" onClick={reserve}><MessageCircle size={17}/> Demander une réservation</button><button className="btn outline" onClick={callHotel}><Phone size={16}/> Contacter l’hôtel</button></div></section>
 
-      <section className="section location" id="contact"><div><div className="section-label"><span>06</span> NOUS TROUVER</div><h2>À Daloa,<br/><em>près de vous.</em></h2><p>L’adresse exacte et l’itinéraire seront ajoutés après confirmation par l’établissement.</p><button className="text-link" onClick={showMap}>Voir l’itinéraire <ArrowUpRight size={16}/></button></div><div className="map"><div className="map-lines"/><div className="map-pin"><MapPin size={24}/></div><div className="map-card"><MapPin/><div><b>IMANS HOTEL</b><small>Daloa, Côte d’Ivoire</small><em>Adresse à confirmer</em></div></div><small className="map-tag">DALОA · CI</small></div></section>
+      <section className="section location" id="contact"><div><div className="section-label"><span>06</span> NOUS TROUVER</div><h2>À Daloa,<br/><em>près de vous.</em></h2><p>L’adresse exacte et l’itinéraire seront ajoutés après confirmation par l’établissement.</p><button className="text-link" onClick={showMap}>Voir l’itinéraire <ArrowUpRight size={16}/></button></div><div className="map"><div className="map-lines"/><div className="map-pin"><MapPin size={24}/></div><div className="map-card"><MapPin/><div><b>IMANS HOTEL</b><small>Daloa, Côte d’Ivoire</small><em>Adresse à confirmer</em></div></div><small className="map-tag">DALOA · CI</small></div></section>
     </main>
 
     <footer className="footer"><a className="brand" href="#accueil"><span className="brand-icon">I<sup>✦</sup></span><span><b>IMANS</b><small>H O T E L</small></span></a><p>Une adresse à Daloa. Une expérience à découvrir.</p><div className="footer-bottom"><span>© {new Date().getFullYear()} IMANS HOTEL — Maquette de présentation</span><a href="#accueil">Retour en haut ↑</a></div></footer>
